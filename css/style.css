@@ -385,20 +385,17 @@ img {
     }
     
     /* For education section */
-    .education-content {
+    .third-content {
         flex-direction: column; /* Puts images below text */
         text-align: center;
     }
     
-    .education-images {
+    .third-images {
         max-width: 70%; /* Adjust image size for medium screens */
         margin-top: 20px;
     }
 
-    
-
-
-    .education .education-heading {
+    .third .third-heading {
         text-align: center;
     }
 }
@@ -407,7 +404,7 @@ img {
     /* Make images full width on small screens */
     .hero-content img,
     .next-content img,
-    .education-images {
+    .third-images {
         max-width: 100%;
     }
     
