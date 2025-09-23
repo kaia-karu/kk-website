@@ -1,0 +1,602 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #b8c9dc;
+    --light-text: #b6d9f5;
+    --dark-text: rgb(94, 132, 188);
+    --navbar-color: hsl(220, 32%, 44%);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    background: var(--background-color); 
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--dark-text); 
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+    background: var(--navbar-color); /* Dark background for the navbar */
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    flex-wrap: wrap;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar .main-menu ul {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.navbar ul li a{
+    display: flex;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--light-text); /* Change text color on hover */
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+
+
+.main-menu {
+    flex-grow: 0;
+    text-align: right;
+}
+
+.main-menu ul {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of menu items */
+    justify-content: flex-end;
+}
+
+.logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    gap: 20px; /* Space between logo and text */
+}
+
+
+.logo-group {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between logo and text */
+}
+
+.linkbar {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+
+.linkbar img {
+    max-width: 20px;
+    height: auto;
+
+
+} 
+
+.linkbar ul {
+    display: flex; /* Use flexbox for alignment */
+    padding: 0;
+    margin: 0;
+    gap: 10px; /* Space between icons */
+    padding: 10px 10px;
+}
+
+
+
+
+
+
+/* Hamburger Button Styles */
+.hamburger-button {
+    display: none; /* Hide by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+    margin-left: auto; /* Align to the right */
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-text);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+.navbar .main-menu ul {
+    display: flex;
+}
+
+/* When menu is active (mobile) */
+.navbar .main-menu.active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--navbar-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .hamburger-button {
+        display: block; /* Show hamburger button on mobile */
+    }
+    
+    .navbar .main-menu ul {
+        display: none; /* Hide menu by default on mobile */
+        width: 100%;
+    }
+    
+    .navbar .main-menu.active ul {
+        display: flex; /* Show menu when active */
+    }
+    
+    /* Optional: Animate hamburger to X when active */
+    .hamburger-button.active .hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .hamburger-button.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-button.active .hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .main-menu {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT ME */
+
+/* Hero */
+.hero {
+    margin-bottom: 50px;
+    padding: 30px 30px; /* Padding for the section */
+}
+
+
+.hero-content{
+    display: flex; 
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between image and text */
+    margin-bottom: 30px;
+    gap: 50px;
+}
+
+
+.hero-content img{
+    max-width: 40%; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+.hero .hero-heading {
+    color: var(--dark-text);
+}
+
+
+.hero .hero-text {
+    max-width: 100%; /* Limit the width of the text container */
+    min-width: 0;
+    color: var(--dark-text); /* Light text color for contrast */
+    font-size: 1.4rem; /* Responsive font size */
+    line-height: 1.5;
+}
+
+
+
+
+
+/* Next */
+.next {
+    background: var(--navbar-color); /* Dark background for the next section */
+    padding: 30px 30px; /* Padding for the section */
+}
+
+
+.next-content {
+    display: flex; 
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+
+.next-content img {
+    max-width: 40%; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+.next .next-heading {
+    color: var(--light-text); /* Light text color for contrast */
+}
+
+
+.next .next-text {
+    max-width: 100%; /* Limit the width of the text container */
+    min-width: 0;
+    color: var(--light-text); /* Light text color for contrast */
+    font-size: 1.4rem; /* Responsive font size */
+    line-height: 1.5;
+}
+
+
+
+
+
+/* Education */
+
+.third {
+    margin-bottom: 50px;
+    padding: 30px 30px; /* Padding for the section */
+}
+
+.third-content { 
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between image and text */
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.third-images {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-right: 90px;
+}
+
+.third-images img:first-child {
+    margin-bottom: 40px; /* Space between images */
+    max-width: 120%;
+}
+
+.third-images img:last-child {
+    max-width: 120%;
+
+}
+
+.third .third-heading {
+    color: var(--dark-text); /* Dark text color for contrast */
+     /* Responsive font size */
+}
+
+.third .third-text {
+    max-width: 100%; /* Limit the width of the text container */
+    min-width: 0;
+    color: var(--dark-text); /* Light text color for contrast */
+    font-size: 1.4rem; /* Responsive font size */
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+/* Media Queries for Responsive Layout */
+
+@media (max-width: 992px) {
+    /* For hero and next sections */
+    .hero-content,
+    .next-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content img,
+    .next-content img {
+        max-width: 70%; /* Adjust image size for medium screens */
+        margin-top: 20px;
+    }
+
+    .hero .hero-heading,
+    .next .next-heading {
+        text-align: center;
+    }
+    
+    /* For education section */
+    .education-content {
+        flex-direction: column; /* Puts images below text */
+        text-align: center;
+    }
+    
+    .education-images {
+        max-width: 70%; /* Adjust image size for medium screens */
+        margin-top: 20px;
+    }
+
+    
+
+
+    .education .education-heading {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Make images full width on small screens */
+    .hero-content img,
+    .next-content img,
+    .education-images {
+        max-width: 100%;
+    }
+    
+    
+    .main-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PORTFOLIO */
+
+/* top */
+
+.top {
+    margin-bottom: 50px;
+    padding: 30px 30px;
+}
+
+.top-content .middle-content .sponges-content .bottom-content {
+    display: flex; 
+    align-items: center; /* Align items vertically */
+    gap: 50px; /* Space between the image and text */
+}
+
+
+.top-content img .middle-content img .sponges-content img .bottom-content img {
+    max-width: 100%; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+
+.top .top-heading {
+    color: var(--dark-text); /* Dark text color for contrast */
+    font-size: 2.5rem; /* Responsive font size */
+    text-align: center;
+}
+
+
+
+
+
+/* middle */
+
+.middle {
+    background: var(--navbar-color); /* Dark background for the next section */
+    padding: 50px 30px; /* Padding for the section */
+    margin-top: 40px;
+    
+}
+
+.middle .middle-heading {
+    color: var(--light-text); /* Light text color for contrast */
+    font-size: 2.5rem; /* Responsive font size */
+    text-align: center;
+}
+
+
+
+
+.sponges {
+    margin-bottom: 50px;
+    padding: 30px 30px; /* Padding for the section */
+}
+
+.sponges .sponges-heading {
+    color: var(--dark-text); /* Dark text color for contrast */
+    font-size: 2.5rem; /* Responsive font size */
+    text-align: center;
+}
+
+
+
+
+/* bottom */
+.bottom {
+    background: var(--navbar-color); /* Dark background for the next section */
+    margin-top: 40px;
+    padding: 50px 30px; /* Padding for the section */
+}
+
+.bottom .bottom-heading {
+    color: var(--light-text); /* Dark text color for contrast */
+    font-size: 2.5rem; /* Responsive font size */
+    text-align: center;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 10px;
+
+}
+
+.container-small {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px;
+}
+
+/* Text Classes */
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 50px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 20px 0 20px;
+}
+
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+/* Background */
+.bg-primary {
+    background: var(--dark-text);
+    color: #fff;
+}
+
+.bg-light {
+    background: var(--light-text);
+    color: #333;
+}
+.bg-dark {
+    background: var(--navbar-color);
+    color: #fff;
+}

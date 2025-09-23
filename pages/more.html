@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <style>
+        .hero .container .hero-text {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for small screens */
+            gap: 20px;
+        }
+
+        .next .container .next-text {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for small screens */
+            gap: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1> 
+                        Kaia Karu
+                    </h1> 
+                </a>
+                <div class="linkbar">
+                    <ul>
+                    <!-- Social Media Links -->
+                        <li>
+                            <a href="https://www.instagram.com/kaia.karu/" target="_blank" 
+                            rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                <img src="../images/instagram-logo.png" alt="Instagram Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/kaia-karu-879967359/" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <img src="../images/linkedin-logo.png" alt="LinkedIn Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kaia-karu" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <img src="../images/github-logo.png" alt="GitHub Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="aboutMe.html">Technical</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html" >Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="more.html">More...</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-heading text-xl">
+                Hobbies and Interests
+            </h1>
+            <div class="hero-content">
+                <p class="hero-text">
+                    One of my hobbies is drawing. I have taken many art classes since I was young and have always 
+                    had a passion for drawing using many different materials. The mediums which have been my favorite are: 
+                    Charcoal, graphite, and marker. I really enjoy realism and find it to be such a rewarding practice
+                    that requires lots of patience. 
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+        <section class="next">
+        <div class="container">
+            <h1 class="next-heading text-xl">
+                Music
+            </h1>
+            <div class="next-content">
+                <p class="next-text">
+                    Another of my interests is music. I have a very musical family and have been surrounded by it 
+                    constantly. I have been in a few different choirs throughout my life and I really enjoy singing. I have
+                    messed around with a few intstruments but my voice is the one that I use the most. Other than singing, I 
+                    love to discover new music and enjoy collecting vinyl. There are a wide range of genres that I listen to 
+                    but some artists of note are: The Beatles, Björk, Yung Lean, and Pierce the Veil. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+        <section class="third">
+        <div class="container">
+            <h1 class="third-heading text-xl">
+                Misc
+            </h1>
+            <div class="third-content">
+                <p class="third-text">
+                    Some of my other interests include, history, film, and videogames. Throughout my time at Loyola University,
+                    I have taken many classes surrounding Eastern European History in the 20th Century. This area of history,
+                    is very interesting and its great to learn about intellectuals of this time like Polish writer Czesław Miłosz.
+                    Regarding film, I am a fan of genres like, true crime and horror especially involving apocolypses and dystopias.
+                    I am also a fan of games like: Minecraft, Halo, and I am an avid Tetris player. 
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerButton = document.querySelector('.hamburger-button');
+            const mainMenu = document.querySelector('.main-menu');
+            
+            hamburgerButton.addEventListener('click', function() {
+                mainMenu.classList.toggle('active');
+                hamburgerButton.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

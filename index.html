@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Kaia Karu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1> 
+                        Kaia Karu
+                    </h1> 
+                </a>
+                <div class="linkbar">
+                    <ul>
+                    <!-- Social Media Links -->
+                        <li>
+                            <a href="https://www.instagram.com/kaia.karu/" target="_blank" 
+                            rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                <img src="images/instagram-logo.png" alt="Instagram Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/kaia-karu-879967359/" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <img src="images/linkedin-logo.png" alt="LinkedIn Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kaia-karu" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <img src="images/github-logo.png" alt="GitHub Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="pages/aboutMe.html">Technical</a>
+                    </li>
+                    <li>
+                        <a href="pages/portfolio.html" >Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="pages/more.html">More...</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerButton = document.querySelector('.hamburger-button');
+        const mainMenu = document.querySelector('.main-menu');
+        
+        hamburgerButton.addEventListener('click', function() {
+            mainMenu.classList.toggle('active');
+            hamburgerButton.classList.toggle('active');
+        });
+    });
+</script>
+
+</html>

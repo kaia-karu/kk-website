@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>technical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    
+
+
+
+</head>
+
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-group">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1> 
+                            Kaia Karu
+                        </h1> 
+                    </a>
+                    <div class="linkbar">
+                        <ul>
+                        <!-- Social Media Links -->
+                            <li>
+                                <a href="https://www.instagram.com/kaia.karu/" target="_blank" 
+                                rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                    <img src="../images/instagram-logo.png" alt="Instagram Logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/kaia-karu-879967359/" target="_blank"
+                                rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                    <img src="../images/linkedin-logo.png" alt="LinkedIn Logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/kaiakaru" target="_blank"
+                                rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                    <img src="../images/github-logo.png" alt="GitHub Logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+
+            <!-- Main Menu -->
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="aboutMe.html">Technical</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="more.html">More...</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-heading text-xl">
+                A Bit About Me
+            </h1>
+            <div class="hero-content">
+                <p class="hero-text">
+                    I was born and raised in South Philadelphia, and I currently live in Chicago, Illinois.
+                    I am a student of Computer Science with a passion for developing user-friendly and beautifully
+                    designed software that pleases the eye. I am an advocate for test driven development and well
+                    organized code. I am very excited to use what I have learned and apply it to new job opportunities
+                    that come my way. Languages I am most comfortable with are Python, Java, and JavaScript (HTML + CSS),
+                    and I also have experience with React + Node.js and C. I am currently looking into Scala as part of my
+                    coursework and Ruby as well.
+                    
+                </p>
+                <img src="../images/hero-bg.JPG" alt="me">
+            </div>
+        </div>
+    </section>
+
+    <!-- Next -->
+    <section class="next">
+        <div class="container">
+            <h2 class="next-heading text-xl">
+                What I Do
+            </h2>
+            <div class="next-content">
+                <p class="next-text">
+                    Currently, I am a Stacks Management Student Worker in Cudahy Library at Loyola.
+                    I assist the Access Services Staff with a variety of daily tasks such as
+                    reshelving materials, organizing, shifting books, and transporting materials 
+                    between university campuses. I love the library and it has improved my attention 
+                    to detail and my ability to work independently. Additionally, I have developed 
+                    strong organizational skills, which I bring to every project I undertake.
+                </p>
+                <img src="../images/cudahy.png" alt="Cudahy Library">
+            </div>
+        </div>
+    </section>
+
+    <!-- Third -->
+    <section class="third">
+        <div class="container">
+            <h2 class="third-heading text-xl">
+                Education
+            </h2>
+            <div class="third-content">
+                <p class="third-text">
+                    I graduated in 2022 from Central High School in Philadelphia.
+                    I am currently a student at Loyola University Chicago, where I am pursuing a
+                    BAS in Computer Science. I am set to graduate in the Spring of 2026. Some of my
+                    relevant coursework I have taken includes: multiple Data Structures courses, 
+                    Object Oriented Design, Design and Analysis of Algorithms, Ethical Issues in Computing, 
+                    and Discrete Structures. I am currently taking Progamming Languages and Software Development 
+                    of Wireless and Mobile Devices.
+                </p>
+                    <div class="third-images">
+                        <img src="../images/central.png" alt="Central Alumni">
+                        <img src="../images/loyola.png" alt="Loyola University">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerButton = document.querySelector('.hamburger-button');
+            const mainMenu = document.querySelector('.main-menu');
+            
+            hamburgerButton.addEventListener('click', function() {
+                mainMenu.classList.toggle('active');
+                hamburgerButton.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
