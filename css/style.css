@@ -45,6 +45,14 @@ img {
 
 
 
+
+
+
+
+
+
+
+
 /* Navbar */
 .navbar {
     background: var(--navbar-color); /* Dark background for the navbar */
@@ -223,7 +231,12 @@ img {
 
 
 
-/* ABOUT ME */
+
+
+
+
+
+/* TECHNICAL */
 
 /* Hero */
 .hero {
@@ -325,26 +338,29 @@ img {
 }
 
 .third-images {
-    height: auto;
-    display: block;
+    display: flex;
+    flex-direction: column; /* stack images vertically */
+    align-items: center;    /* center images horizontally */
+    justify-content: center;
+    gap: 20px; /* space between images */
     margin: 0 auto;
+    margin-left: 70px;
+    margin-right: 70px;
     border-radius: 8px;
-    margin-right: 90px;
 }
 
 .third-images img:first-child {
-    margin-bottom: 40px; /* Space between images */
-    max-width: 120%;
+    margin-bottom: 30px; /* Space between images */
+    min-width: 370px;
 }
 
 .third-images img:last-child {
-    max-width: 120%;
+    min-width: 370px;
 
 }
 
 .third .third-heading {
     color: var(--dark-text); /* Dark text color for contrast */
-     /* Responsive font size */
 }
 
 .third .third-text {
@@ -354,8 +370,6 @@ img {
     font-size: 1.4rem; /* Responsive font size */
     line-height: 1.5;
 }
-
-
 
 
 
@@ -390,7 +404,7 @@ img {
         text-align: center;
     }
     
-    .third-images {
+    .third-images img {
         max-width: 70%; /* Adjust image size for medium screens */
         margin-top: 20px;
     }
@@ -433,7 +447,37 @@ img {
 
 
 
+
+
+
+
+
 /* PORTFOLIO */
+
+/* Note */
+.note {
+   padding: 30px 30px; 
+}
+
+.note .note-content {
+    display: flex; 
+    align-items: center; /* Align items vertically */
+    justify-content: center;
+}
+
+.note .note-heading {
+    color: var(--dark-text);
+    text-align: center;
+}
+
+.note .note-text {
+    max-width: 100%; /* Limit the width of the text container */
+    min-width: 0;
+    color: var(--dark-text); /* Light text color for contrast */
+    font-size: 1.4rem; /* Responsive font size */
+    line-height: 1.5;
+    text-align: center;
+}
 
 /* top */
 
@@ -537,7 +581,6 @@ img {
     max-width: 1200px;
     margin: 0 auto; /* Center the container */
     padding: 0 10px;
-
 }
 
 .container-small {
