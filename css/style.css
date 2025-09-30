@@ -229,6 +229,45 @@ img {
 
 
 
+/* INDEX */
+.profile {
+    margin-bottom: 50px;
+    padding: 30px 20px;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.profile-content img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+.profile .profile-heading {
+    color: var(--dark-text);
+}
+
+.profile .profile-text {
+    color: var(--dark-text);
+    max-width: 100%;
+    min-width: 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -259,7 +298,6 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 8px;
 }
 
 
@@ -382,7 +420,8 @@ img {
 @media (max-width: 992px) {
     /* For hero and next sections */
     .hero-content,
-    .next-content {
+    .next-content,
+    .profile-content {
         flex-direction: column;
         text-align: center;
     }
@@ -394,7 +433,8 @@ img {
     }
 
     .hero .hero-heading,
-    .next .next-heading {
+    .next .next-heading,
+    .profile .profile-heading {
         text-align: center;
     }
     
