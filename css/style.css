@@ -218,7 +218,12 @@ img {
 
 }
 
-
+footer {
+    background-color: var(--navbar-color);
+    color: var(--light-text);        
+    padding: 20px;
+    text-align: center;
+}
 
 
 
@@ -320,7 +325,7 @@ img {
 
 /* Next */
 .next {
-    background: var(--navbar-color); /* Dark background for the next section */
+    background: var(--background-color); /* Dark background for the next section */
     padding: 30px 30px; /* Padding for the section */
 }
 
@@ -344,14 +349,14 @@ img {
 
 
 .next .next-heading {
-    color: var(--light-text); /* Light text color for contrast */
+    color: var(--dark-text); /* Light text color for contrast */
 }
 
 
 .next .next-text {
     max-width: 100%; /* Limit the width of the text container */
     min-width: 0;
-    color: var(--light-text); /* Light text color for contrast */
+    color: var(--dark-text); /* Light text color for contrast */
     font-size: 1.4rem; /* Responsive font size */
     line-height: 1.5;
 }
@@ -363,8 +368,8 @@ img {
 /* Education */
 
 .third {
-    margin-bottom: 50px;
     padding: 30px 30px; /* Padding for the section */
+    background-color: var(--navbar-color);
 }
 
 .third-content { 
@@ -398,13 +403,13 @@ img {
 }
 
 .third .third-heading {
-    color: var(--dark-text); /* Dark text color for contrast */
+    color: var(--light-text); /* Dark text color for contrast */
 }
 
 .third .third-text {
     max-width: 100%; /* Limit the width of the text container */
     min-width: 0;
-    color: var(--dark-text); /* Light text color for contrast */
+    color: var(--light-text); /* Light text color for contrast */
     font-size: 1.4rem; /* Responsive font size */
     line-height: 1.5;
 }
