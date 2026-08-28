@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Kaia Karu</h1> 
+                </a>
+                <div class="linkbar">
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/kaia.karu/" target="_blank" 
+                            rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                <img src="../images/instagram-logo.png" alt="Instagram Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/kaia-karu-879967359/" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <img src="../images/linkedin-logo.png" alt="LinkedIn Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kaia-karu" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <img src="../images/github-logo.png" alt="GitHub Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:kaiakaru7@gmail.com" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="Mail">
+                                <img src="../images/mail-logo.png" alt="Mail Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="technical.html">Technical</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="tetris.html">Tetris</a></li>
+                    <li><a href="more.html">More...</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="next" style="background: #080811; padding: 40px 20px;">
+    <div class="container" style="text-align: center;">
+        <h1 class="next-heading text-xl" style="color: #00f0ff; text-shadow: 0 0 10px rgba(0, 240, 255, 0.7); font-family: monospace; letter-spacing: 2px;">
+            TETRIS
+        </h1>
+        
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; flex-wrap: wrap; margin-top: 25px;">
+            <!-- Main Game Canvas Container -->
+            <div style="position: relative;">
+                <!-- Increased canvas dimensions to 360x500 -->
+                <canvas id="tetris" width="302" height="500" 
+                    style="border: 3px solid #00f0ff; background: #000; border-radius: 6px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 10px rgba(0, 240, 255, 0.2);">
+                </canvas>
+                
+                <!-- Arcade Pause Overlay -->
+                <div id="pause-overlay" 
+                    style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 5, 12, 0.85); color: #00f0ff; font-size: 2.5rem; font-weight: bold; font-family: monospace; align-items: center; justify-content: center; border-radius: 6px; text-shadow: 0 0 10px #00f0ff;">
+                    PAUSED
+                </div>
+            </div>
+
+            <!-- Arcade Sidebar -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 25px; background: #0f101d; border: 2px solid #00f0ff; border-radius: 6px; padding: 25px; min-width: 180px; box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);">
+                <!-- Score Display -->
+                <div style="text-align: center; width: 100%;">
+                    <p style="font-size: 1rem; font-weight: bold; color: #8a99ad; font-family: monospace; margin-bottom: 5px; letter-spacing: 1px;">SCORE</p>
+                    <span id="score" style="font-size: 2rem; font-weight: bold; color: #00f0ff; font-family: monospace; text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);">0</span>
+                </div>
+                
+                <!-- Next Piece Display -->
+                <div style="text-align: center;">
+                    <p style="font-size: 1rem; font-weight: bold; color: #8a99ad; font-family: monospace; margin-bottom: 10px; letter-spacing: 1px;">NEXT</p>
+                    <!-- Increased next canvas dimensions to 140x140 -->
+                    <canvas id="next" width="130" height="130" 
+                        style="background: #000; border: 1px solid #1d4ed8; border-radius: 4px; box-shadow: inset 0 0 6px rgba(29, 78, 216, 0.5);">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 0.95rem; margin-top: 25px; color: #b6d9f5; font-family: monospace;">
+            Controls: <b>&larr; &rarr;</b> Move | <b>&uarr;</b> Rotate | <b>&darr;</b> Soft Drop | <b>Space</b> Hard Drop | <b>Esc</b> Pause
+        </p>
+    </div>
+</section>
+
+    <footer>
+        <p> * Resume available upon request *</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
